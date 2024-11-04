@@ -33,7 +33,7 @@ void Run()
 
 		Render();
 
-		SDL_Delay(timestep);
+		SDL_Delay((Uint32)timestep);
 	}
 }
 

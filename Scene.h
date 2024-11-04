@@ -3,6 +3,7 @@
 #include<math.h>
 
 #include"Object.h"
+
 class Scene
 {
 public:
