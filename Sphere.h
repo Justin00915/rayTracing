@@ -1,9 +1,18 @@
 #pragma once
 #include"Object.h"
+#include"HitInfo.h"
+#include"Ray.h"
+
 class Sphere : Object
 {
 public:
-	Sphere(double x, double y, double z, double r)
-		: Object(x, y, z), r(r) {};
+	Sphere(Vector position, double r)
+		: Object(position), r(r) {};
+
+	HitInfo Intersect(Ray ray)
+	{
+
+	}
+
 	double r;
 };

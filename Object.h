@@ -1,11 +1,11 @@
 #pragma once
+#include"vector.h"
+
 class Object
 {
 public:
-	Object(double x, double y, double z)
-		: x(x), y(y), z(y) {};
+	Object(Vector position)
+		: position(position) {};
 
-	double x;
-	double y;
-	double z;
+	Vector position;
 };
