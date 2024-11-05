@@ -15,6 +15,7 @@ public:
 	{
 		return sqrt(x * x + y * y + z * z);
 	}
+
 	Vector GetNormalized()
 	{
 		double l = GetLength();
@@ -73,6 +74,11 @@ public:
 	double GetAbsMin() const
 	{
 		return fmin(fmin(fabs(x), fabs(y)), fabs(z));
+	}
+
+	static double Dist(Vector v1, Vector v2)
+	{
+		return (v1 - v2).GetLength();
 	}
 
 	//Component-wise

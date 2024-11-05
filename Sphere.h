@@ -11,7 +11,15 @@ public:
 
 	HitInfo Intersect(Ray ray)
 	{
+		Vector closestRayPointPos = ray.position * 2 + position / (ray.position.Dot(ray.position));
+		
+		Vector differenceVector = closestRayPointPos - position;
 
+		//Performing the calculation with each side squared saves a sqrt operation
+		if ((differenceVector).Dot(differenceVector) <= r * r)
+		{
+			return HitInfo(true, closestRayPointPos, differenceVector.GetNormalized());
+		}
 	}
 
 	double r;
